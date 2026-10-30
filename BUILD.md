@@ -92,13 +92,3 @@ os.execvp('dbus-send',['dbus-send','--session','--print-reply', \
 ```
 
 Then `scp defaultuser@PHONE:/home/defaultuser/pp-shot.png .`
-
-## Git repository
-
-A new repository has been initialized (`main` branch). Create the remote
-and push:
-
-```bash
-git remote add origin URL
-git push -u origin main
-```
