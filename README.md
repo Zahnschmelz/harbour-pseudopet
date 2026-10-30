@@ -8,37 +8,9 @@ keeper) on top of the original pygame/SDL2 game.
 
 ## Screenshots
 
-Phone screenshot (Jolla, 1032×2272): black letterbox bars like the
-Android original, game world in the 240×320 design window, flat A/B/C
-buttons at the bottom.
+Phone screenshot (Jolla 2026, 1032×2272):
 
-![Phone screenshot](screenshots/device/panelfix_flach_knopfs_ganzunten.png)
-
-## Features
-
-- Faithful 240×320 monochrome LCD look, scaled pixel-perfect
-- Fullscreen on tall phone panels (Weston/Lipstick) with black
-  letterbox bars — content never bleeds into the system UI area
-- A/B/C drawn touch buttons; touch zones derived from the same layout
-  source, holds repeat (letter grid, fishing lift, …)
-- All original mini-games (fishing, pong, defense, snack, …), day/night
-  world, evolution, offline simulation
-- Background keeper (systemd user timer): hatch/evolution/death
-  notifications while the app is closed (bypasses Silo mode)
-- RPM for aarch64 (`RPMS/harbour-pseudopet-0.85-1.aarch64.rpm`)
-- Game UI auto-detects system language (German/English)
-
-## Installation (phone)
-
-Requires Sailfish OS ≥ 5.x on aarch64.
-
-```bash
-scp RPMS/harbour-pseudopet-0.85-1.aarch64.rpm defaultuser@PHONE:/tmp/
-# on the phone, as root:
-rpm -Uvh --replacepkgs --nodeps /tmp/harbour-pseudopet-0.85-1.aarch64.rpm
-```
-
-Then launch “PseudoPet” from the application grid.
+![Phone screenshot](screenshots/demo.png)
 
 ## Building
 
@@ -55,8 +27,6 @@ pitfalls) see **[README_TECHNICAL.md](README_TECHNICAL.md)**.
 cd src
 SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy python3 main.py
 ```
-
-Desktop mode renders the plain 240×320 design (no letterbox band).
 
 ## Relationship to the original
 
