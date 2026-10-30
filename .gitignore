@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Logs / Laufzeit
+*.log
+.heartbeat
+
+# sfdk-BauArtefakte (im Repo nichts zu suchen)
+_build/
+.sfdk/
+documentation.list
+pseudopet-0.85/
+harbour-pseudopet-0.85/
+
+# erzeugtes Source-Tarball (wird von rpm/make-source-tarball.sh gebaut)
+rpm/pseudopet-0.85-src.tar.gz
+
+# Spielstand (Laufzeit)
+pseudopet_save.json

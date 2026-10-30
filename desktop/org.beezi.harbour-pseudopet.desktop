@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Application
+Name=PseudoPet
+Comment=Retro-Tamagotchi - Eat. Sleep. Evolve!
+Icon=org.beezi.pseudopet
+# Sailfish OS 5: "no-invoker" + Sandboxing=Disabled ist der Starttyp fuer
+# Apps, die kein Qt-Quick-Client sind (hier Python/pygame ueber ein
+# Bash-Starter-Skript). Mit "silica-qt5" (Default) laufen invoker +
+# mapplauncherd + sailjail, und die verlangen eine ELF-Binaerdatei:
+# "harbour-pseudopet: is not elf binary" -> exit(1), kein Fenster.
+X-Nemo-Application-Type=no-invoker
+Exec=harbour-pseudopet
+
+# Ohne diesen Abschnitt schaltet Sailfish OS 5 allein wegen des Praefixes
+# "harbour-" die Sailjail-Sandbox ein; Skripte koennen sie nicht durchlaufen.
+[X-Sailjail]
+Sandboxing=Disabled

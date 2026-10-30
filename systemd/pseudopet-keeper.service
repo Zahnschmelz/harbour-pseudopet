@@ -1,0 +1,12 @@
+[Unit]
+Description=PseudoPet Hintergrund-Keeper (Pflege-Benachrichtigungen)
+Comment=Prueft den Spielstand und sendet D-Bus-Benachrichtigungen
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/share/harbour-pseudopet/src/keeper.py
+Environment=SDL_VIDEODRIVER=dummy
+Environment=SDL_AUDIODRIVER=dummy
+Environment=PYTHONPATH=/usr/share/harbour-pseudopet/pylib
+Nice=19
+IOSchedulingClass=idle
