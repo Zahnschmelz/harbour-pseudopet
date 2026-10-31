@@ -2507,7 +2507,11 @@ class Game:
             lines.append("Very hungry!")
         if not lines:
             lines.append("All fine :)")
-        y = rh(130)
+        # [SFOS-PORT] y bleibt Design-Koordinate: der center()-Helfer
+        # wendet rh() selbst an. Mit rh(130) hier gab es den
+        # Band-Offset doppelt (+208) -> Zeilen rutschten unter die
+        # Box und hinter die Buttons.
+        y = 130
         for ln in lines:
             center(ln, self.font, y)
             y += rs(16)
