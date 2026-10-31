@@ -20,3 +20,7 @@ rpm/pseudopet-0.85-src.tar.gz
 pseudopet_save.json
 
 screenshots/device/
+
+# editor backups
+*~
+*.bak
